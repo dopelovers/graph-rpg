@@ -77,6 +77,10 @@ c1 {
     font-family: arial;
 }
 
+#breadcrumb::before {content: '◟ ∗ ⋅ /';
+    margin-right: 5px;}
+#breadcrumb::after {content: '.◝';}
+
 #back {
     padding: 10px 16px;
     background: black;
@@ -123,14 +127,17 @@ c1 {
 }
 
 .folder:hover {
-    border-color: var(--bg4);
+    border-color: var(--bg1);
 }
 
 .folder .name {
     margin-top:10px;
     text-align:center;
     font-size:14px;
-    color: var(--tx1);
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: white;
 }
 
 .folder-icon {

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 @font-face {
     font-family: "Astone Nouvea";
@@ -8,9 +8,9 @@
 }
 
 :root {
-    --bg1: #141419;
-    --bg2: #1d1d29;
-    --bg3: #3a3a55;
+    --bg1: #310324;
+    --bg2: #A55369;
+    --bg3: #d58ca4;
     --bg4: #616a75;
     --tx1: #d2d1c1;
 }

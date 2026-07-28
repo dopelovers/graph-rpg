@@ -63,14 +63,22 @@ c1 {
 }
 
 #breadcrumb {
-    font-size: 12px;
-    font-style: italic;
+    padding: 10px 16px;
+    background: black;
+    border: 1px solid #0a0605;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .2s;
+    color: var(--bg2);
+    text-transform: uppercase;
     letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 12px;
 }
 
 #back {
     padding: 10px 16px;
-    background: var(--tx1);
+    background: black;
     border:1px solid #0a0605;
     border-radius: 8px;
     cursor: pointer;
@@ -82,7 +90,7 @@ c1 {
     font-size: 12px;
 }
 
-#back:hover {
+#back:hover, #breadcrumb:hover {
     background: var(--bg3);
     color: var(--tx1);
 }

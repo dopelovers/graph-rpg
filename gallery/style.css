@@ -32,6 +32,26 @@ body {
 h1 {
     font-family: "Astone Nouvea";
     font-size: 42px;
+    text-align: center;
+    color: white;
+}
+
+c1 {
+    color: var(--c1);
+}
+
+.sstitre {
+    display: flex;
+    width: fit-content;
+    background: #000;
+    justify-self: center;
+    border-radius: 10px;
+    margin: 0;
+    padding: 0 10px;
+    font: 200 italic 13px / 25px playfair display;
+    text-transform: lowercase;
+    margin-top: -30px;
+    color:white;
 }
 
 .toolbar {

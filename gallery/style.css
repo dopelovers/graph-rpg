@@ -13,6 +13,7 @@
     --bg3: #d58ca4;
     --bg4: #616a75;
     --tx1: #d2d1c1;
+    --c1: #d58ca4;
 }
 
 * {
@@ -24,7 +25,7 @@ body {
     padding: 40px;
     background: var(--bg1);
     color: var(--tx1);
-    font-family: Inter, sans-serif;
+    font-family: Playfair display, sans-serif;
     height: 100vh;
 }
 

@@ -13,6 +13,8 @@ let currentImageIndex = 0;
 const prevImage = document.getElementById("prevImage");
 const nextImage = document.getElementById("nextImage");
 const breadcrumb = document.getElementById("breadcrumb");
+const searchInput = document.getElementById("input-search");
+searchInput.addEventListener("input", updateList);
 
 // récupérer le contenu d'un dossier github
 async function getFolder(path){
@@ -76,16 +78,21 @@ async function loadFolder(path){
     gallery.innerHTML = "";
 
     const files = await getFolder(path);
+    const search = searchInput.value.trim().toLowerCase();
 
     const folders = files.filter(
-        f => f.type === "dir"
-    );
+        f => f.type === "dir" &&
+            f.name.toLowerCase().includes(search)
+    )
+    .sort((a, b) => a.name.localeCompare(b.name, 'fr', { numeric: true, sensitivity: 'base' }));
 
     const images = files.filter(
         f =>
-        f.type === "file" &&
-        /\.(png|jpg|jpeg|webp|gif|svg)$/i.test(f.name)
-    );
+            f.type === "file"  &&
+            f.name.toLowerCase().includes(search) &&
+            /\.(png|jpg|jpeg|webp|gif|svg)$/i.test(f.name)
+    )
+    .sort((a, b) => a.name.localeCompare(b.name, 'fr', { numeric: true }));
     currentImages = images;
 
     showFolders(folders);

@@ -265,3 +265,19 @@ c1 {
 .nav:hover{
     background: var(--color1);
 }
+
+#search input {
+    padding: 10px;
+    background: var(--bg3);
+    border: 1px solid var(--bg2);
+    border-radius: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 12px;
+    color: white;
+}
+
+#search {
+    padding: 20px;
+}

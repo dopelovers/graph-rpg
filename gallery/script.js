@@ -16,7 +16,7 @@ const breadcrumb = document.getElementById("breadcrumb");
 const searchInput = document.getElementById("input-search");
 searchInput.addEventListener("input", updateList);
 
-// récupérer le contenu d'un dossier github
+
 async function getFolder(path){
     const url=`https://api.github.com/repos/${USER}/${REPO}/contents/${path}`;
     const res=await fetch(url);
@@ -116,11 +116,15 @@ back.onclick = ()=>{
         loadFolder(currentPath);
     } else {
         currentPath = ROOT;
+        history.push(ROOT);
         loadFolder(ROOT);
     }
 };
 
-// ajoute le preview
+function updateList() {
+    loadFolder(currentPath);
+}
+
 
 const preview = document.getElementById("preview");
 const previewImage = document.getElementById("previewImage");
